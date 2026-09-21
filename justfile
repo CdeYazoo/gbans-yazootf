@@ -4,7 +4,8 @@ alias c := check
 alias f := fmt
 alias d := dev
 
-SOURCEMOD_INCLUDE_DIR := shell('dirname $(which spcomp64)') + "/include"
+SPCOMP_BIN := shell('if which spcomp64 >/dev/null 2>&1; then echo "spcomp64"; else echo "spcomp"; fi')
+SOURCEMOD_INCLUDE_DIR := shell('dirname $(which ' + SPCOMP_BIN + ')') + "/include"
 DOCKER_DB_CONTAINER := "gbans-db"
 
 all: build-backend build-frontend build-sourcemod build-docs
