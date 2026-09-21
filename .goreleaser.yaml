@@ -4,7 +4,7 @@ project_name: gbans-yazootf
 
 before:
   hooks:
-    - just frontend
+    - just build-frontend
     - just sourcemod
 
 dockers_v2:
