@@ -5,6 +5,6 @@ EXPOSE 27715/udp
 HEALTHCHECK --interval=1m CMD /app/gbans health || exit 1
 WORKDIR /app
 VOLUME ["/app/.cache"]
-COPY ${TARGETPLATFORM}/gbans .
-ENTRYPOINT ["/app/gbans"]
+COPY ${TARGETPLATFORM}/gbans-yazootf .
+ENTRYPOINT ["/app/gbans-yazootf"]
 CMD ["serve"]
