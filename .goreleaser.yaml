@@ -13,7 +13,7 @@ dockers_v2:
     platforms:
       - linux/amd64
     images:
-      - "ghcr.io/CdeYazoo/gbans-yazootf"
+      - "ghcr.io/cdeyazoo/gbans-yazootf"
     tags:
       - "v{{ .Version }}"
       - "latest"
@@ -44,7 +44,7 @@ builds:
 nfpms:
   - maintainer: ComradeYazoo <belirkalli@gmail.com>
     description: TF2 Community Backend
-    homepage: https://github.com/CdeYazoo/gbans-yazootf
+    homepage: https://github.com/cdeyazoo/gbans-yazootf
     license: MIT
     formats:
       - deb
@@ -76,7 +76,7 @@ checksum:
 
 release:
   github:
-    owner: CdeYazoo
+    owner: cdeyazoo
     name: gbans-yazootf
   draft: false
   replace_existing_draft: true
