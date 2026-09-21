@@ -15,15 +15,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://leighmacdonald.github.io',
+  url: 'https://cdeyazoo.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/gbans/',
+  baseUrl: '/gbans-yazootf/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'leighmacdonald', // Usually your GitHub org/user name.
-  projectName: 'gbans', // Usually your repo name.
+  organizationName: 'cdeyazoo', // Usually your GitHub org/user name.
+  projectName: 'gbans-yazootf', // Usually your repo name.
   trailingSlash: false,
   onBrokenLinks: 'warn',
 
