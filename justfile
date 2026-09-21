@@ -131,6 +131,7 @@ install-frontend:
 
 [working-directory('frontend')]
 build-frontend:
+    pnpm install --frozen-lockfile
     pnpm run build
 
 [working-directory('frontend')]
