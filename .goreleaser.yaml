@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 version: 2
-project_name: gbans
+project_name: gbans-yazootf
 
 before:
   hooks:
@@ -9,11 +9,11 @@ before:
 
 dockers_v2:
   - dockerfile: "docker/Dockerfile"
-    ids: ["gbans"]
+    ids: ["gbans-yazootf"]
     platforms:
       - linux/amd64
     images:
-      - "ghcr.io/leighmacdonald/gbans"
+      - "ghcr.io/CdeYazoo/gbans-yazootf"
     tags:
       - "v{{ .Version }}"
       - "latest"
@@ -25,7 +25,7 @@ dockers_v2:
     sbom: false
 
 builds:
-  - id: gbans
+  - id: gbans-yazootf
     env: [CGO_ENABLED=0]
     goos:
       - linux
@@ -37,14 +37,14 @@ builds:
     ldflags:
       - -s
       - -w
-      - -X github.com/leighmacdonald/gbans/internal/cmd.BuildVersion={{.Version}}
-      - -X github.com/leighmacdonald/gbans/internal/cmd.BuildCommit={{.Commit}}
-      - -X github.com/leighmacdonald/gbans/internal/cmd.BuildDate={{.Date}}
+      - -X github.com/CdeYazoo/gbans-yazootf/internal/cmd.BuildVersion={{.Version}}
+      - -X github.com/CdeYazoo/gbans-yazootf/internal/cmd.BuildCommit={{.Commit}}
+      - -X github.com/CdeYazoo/gbans-yazootf/internal/cmd.BuildDate={{.Date}}
 
 nfpms:
-  - maintainer: Leigh MacDonald <leigh.macdonald@gmail.com>
+  - maintainer: ComradeYazoo <belirkalli@gmail.com>
     description: TF2 Community Backend
-    homepage: https://github.com/leighmacdonald/gbans
+    homepage: https://github.com/CdeYazoo/gbans-yazootf
     license: MIT
     formats:
       - deb
@@ -76,8 +76,8 @@ checksum:
 
 release:
   github:
-    owner: leighmacdonald
-    name: gbans
+    owner: CdeYazoo
+    name: gbans-yazootf
   draft: false
   replace_existing_draft: true
   prerelease: auto
