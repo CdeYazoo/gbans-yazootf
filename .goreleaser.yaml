@@ -5,7 +5,7 @@ project_name: gbans-yazootf
 before:
   hooks:
     - just build-frontend
-    - just sourcemod
+    - just build-sourcemod
 
 dockers_v2:
   - dockerfile: "docker/Dockerfile"
