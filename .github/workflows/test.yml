@@ -111,6 +111,9 @@ jobs:
           version: 9
           run_install: false
 
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+
       - name: Setup nodejs
         uses: actions/setup-node@v4
         with:
