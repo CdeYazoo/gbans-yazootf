@@ -16,6 +16,7 @@ linters:
     - ireturn
     - lll
     - exhaustruct
+    - exhaustruct_v5
     - mnd
     - godoclint
     - godox
