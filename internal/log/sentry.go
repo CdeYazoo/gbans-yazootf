@@ -19,9 +19,7 @@ func NewSentryClient(dsn string, tracing bool, sampleRate float64, buildVersion 
 		Dsn:              dsn,
 		EnableTracing:    tracing,
 		TracesSampleRate: sampleRate,
-		DataCollection: sentry.DataCollectionOptions{
-    		SendDefaultPII: true,
-		},
+		SendDefaultPII:   true, //nolint:staticcheck
 		SampleRate:       1.0,
 		Release:          buildVersion,
 		Environment:      env,
